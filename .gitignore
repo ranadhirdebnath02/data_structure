@@ -1,0 +1,74 @@
+# ==============================================================================
+# Visual Studio Code
+# ==============================================================================
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Ignore all workspace files except data_structure.code-workspace in root
+*.code-workspace
+!/data_structure.code-workspace
+
+# Local VS Code history & test cache
+.history/
+.vscode-test/
+
+
+# ==============================================================================
+# C / C++ Build Artifacts & Binaries
+# ==============================================================================
+
+# Object files and intermediate artifacts
+*.o
+*.obj
+*.ko
+*.so
+*.so.*
+*.dylib
+*.dll
+*.a
+*.lib
+*.la
+*.lai
+
+# Executables (compiled binaries with no extension on Linux/macOS)
+*.out
+*.exe
+*.bin
+*.app
+*.elf
+
+# GCC / Clang coverage, profiling, and debug output
+*.gcno
+*.gcda
+*.gcov
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Build directories
+build/
+bin/
+out/
+dist/
+cmake-build-*/
+.cache/
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Clang / Language Server caches
+.clangd/
+compile_commands.json
+.ccls-cache/
+
+# Core dumps
+core
+core.*
+vgcore.*
+

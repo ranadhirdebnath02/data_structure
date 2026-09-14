@@ -1,0 +1,107 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": true
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Run C",
+        "type": "shell",
+        // "command": "gcc -std=c23 -Wall -Wextra -pedantic -g \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}.out\" && \"${fileDirname}/${fileBasenameNoExtension}.out\"",
+        "command": "gcc -std=c23 -Wall -Wextra -pedantic -g \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}.out\" && \"${fileDirname}/${fileBasenameNoExtension}.out\"; rm -f \"${fileDirname}/${fileBasenameNoExtension}.out\"",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": true,
+          "panel": "shared",
+          "clear": true
+        },
+        "problemMatcher": [
+          "$gcc"
+        ]
+      },
+      {
+        "label": "Run C++",
+        "type": "shell",
+        // "command": "g++ -std=c++23 -Wall -Wextra -pedantic -g \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}.out\" && \"${fileDirname}/${fileBasenameNoExtension}.out\"",
+        "command": "g++ -std=c++23 -Wall -Wextra -pedantic -g \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}.out\" && \"${fileDirname}/${fileBasenameNoExtension}.out\"; rm -f \"${fileDirname}/${fileBasenameNoExtension}.out\"",
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": true,
+          "panel": "shared",
+          "clear": true
+        },
+        "problemMatcher": [
+          "$gcc"
+        ]
+      },
+      {
+        "label": "Run Java",
+        "type": "shell",
+        // "command": "javac \"${file}\" && java -cp \"${fileDirname}\" \"${fileBasenameNoExtension}\"",
+        "command": "javac \"${file}\" && java -cp \"${fileDirname}\" \"${fileBasenameNoExtension}\"; rm -f \"${fileDirname}/${fileBasenameNoExtension}.class\"",
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": true,
+          "panel": "shared",
+          "clear": true
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Run Python",
+        "type": "shell",
+        "command": "python3 \"${file}\"",
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": true,
+          "panel": "shared",
+          "clear": true
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Run PHP",
+        "type": "shell",
+        "command": "php \"${file}\"",
+        "group": {
+          "kind": "build",
+          "isDefault": false
+        },
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": true,
+          "panel": "shared",
+          "clear": true
+        },
+        "problemMatcher": []
+      }
+    ]
+  }
+}
