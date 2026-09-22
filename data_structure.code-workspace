@@ -13,8 +13,8 @@
       {
         "label": "Run C",
         "type": "shell",
-        // "command": "gcc -std=c23 -Wall -Wextra -pedantic -g \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}.out\" && \"${fileDirname}/${fileBasenameNoExtension}.out\"",
-        "command": "gcc -std=c23 -Wall -Wextra -pedantic -g \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}.out\" && \"${fileDirname}/${fileBasenameNoExtension}.out\"; rm -f \"${fileDirname}/${fileBasenameNoExtension}.out\"",
+        // "command": "gcc -std=c23 -Wall -Wextra -pedantic -g \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}.out\" -lm && \"${fileDirname}/${fileBasenameNoExtension}.out\"",
+        "command": "gcc -std=c23 -Wall -Wextra -pedantic -g \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}.out\" -lm && { \"${fileDirname}/${fileBasenameNoExtension}.out\"; rm -f \"${fileDirname}/${fileBasenameNoExtension}.out\"; }",
         "group": {
           "kind": "build",
           "isDefault": true

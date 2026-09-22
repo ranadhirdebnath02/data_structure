@@ -98,9 +98,9 @@ void clear()
   }
 }
 
-void main()
+int main()
 {
-  int v, ch, s;
+  int v, ch;
   while (true)
   {
     printf("1. Push\n2. Pop\n3. Peek\n4. Print\n5. Exit\nEnter your choice: ");
@@ -127,11 +127,11 @@ void main()
       break;
     case 5:
       clear();
-      exit(0);
-      break;
+      return 0;
     default:
       printf("Invalid choice\n");
       break;
     }
   }
+  return 0;
 }
